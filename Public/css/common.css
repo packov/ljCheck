@@ -1,0 +1,46 @@
+.pagination {
+    float: right;
+    padding-top: 10px;
+}
+.top {
+    height: 80px;
+    position: relative;
+}
+.left{
+    width: 15%;
+    position: absolute;
+    overflow: hidden;
+}
+.main {
+    width: 85%;
+    float: left;
+    padding-left: 15%;
+    min-height: 600px;
+}
+.loginbm {
+    margin-left: 50% ;
+    margin-top: 10px;
+    background:url(../images/loginbg2.png) repeat-x;
+    color:#0b3a58;
+}
+
+.uploadIndex{
+    float: left;
+    padding-left: 60px;
+    padding-top: 20px;
+}
+
+.upload{
+    clear: both; padding-left: 60px; padding-top: 20px;
+}
+
+.amountRight {
+    padding-top: 10px;
+    float: right;
+    font-size: 14px;
+}
+
+#userList_btn_add{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}

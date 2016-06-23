@@ -1,0 +1,16 @@
+<extend name="Public:from" />
+<block name="content">
+    <div class="formbody" id="addUser_div">
+        <div class="formtext">Hi，<b>{$username}</b>，欢迎使用添加用户功能！</div>
+        <form method="post" id="fromitem" onsubmit="ajaxSubmit('fromitem');return false;" action="{:U('User/doAddUser')}">
+        <ul class="forminfo">
+            <li><label>用户名<b>*</b></label><input name="name" type="text" class="dfinput" /></li>
+            <li><label>密码<b>*</b></label><input name="password" type="text" class="dfinput"/></li>
+            <li><label>确认密码<b>*</b></label><input name="confirm_password" type="text" class="dfinput"/></li>
+            <li><input id="btn_addUser" type="submit" class="btn" value="提交"/> <label>&nbsp;</label>
+                <input id="cancel_btn_addUser" onclick="closeParent();" type="button" class="btn" value="取消"/>
+            </li>
+        </ul>
+        </form>
+    </div>
+</block>

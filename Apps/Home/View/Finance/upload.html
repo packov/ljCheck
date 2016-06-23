@@ -1,0 +1,77 @@
+<!--main部分-->
+<div id="upload" class="main">
+
+    <div class="place">
+        <span>位置：</span>
+        <ul class="placeul">
+            <li><a href="{:U('Finance/expenseList')}">财务统计</a></li>
+            <li><a href="{:U('Finance/upload')}">上传财务数据</a></li>
+        </ul>
+    </div>
+
+    <div class="mainindex">
+
+
+        <div class="welinfo">
+            <!--<span><img src="__ROOT__/Public/images/sun.png" alt="天气"/></span>-->
+            <b>{$username} 您好!，欢迎使用零境考勤管理系统</b>
+        </div>
+
+        <span style="color: red; clear: both; padding-left: 10px;">(推荐使用Chrome 浏览器)</span>
+
+        <div class="welinfo">
+            <span><img src="__ROOT__/Public/images/time.png" alt="时间"/></span>
+            <i>当前日期：<?php echo date("Y-m-d",time());?></i>
+        </div>
+
+        <div class="xline"></div>
+        <li><img src="__ROOT__/Public/images/ico04.png"/>
+            <span><a href="#">文件上传</a></span>
+        </li>
+        <div>
+            <div id="expense_excel" class="uploadIndex" >
+                <form method="post" action="__CONTROLLER__/doUploadExcel" enctype="multipart/form-data">
+                    <b>选择报销Excel表：</b>
+                    <input type="file" name="expense_excel"/>
+                    <input type="submit" value="上传" class="scbtn"/>
+                </form>
+            </div>
+            <div id="advance_excel" class="upload" >
+                <form method="post" action="__CONTROLLER__/doUploadExcel" enctype="multipart/form-data">
+                    <b>选择预支Excel表：</b>
+                    <input type="file" name="advance_excel"/>
+                    <input type="submit" value="上传" class="scbtn"/>
+                </form>
+            </div>
+            <div id="fixed_asset_excel" class="upload" >
+                <form method="post" action="__CONTROLLER__/doUploadExcel" enctype="multipart/form-data">
+                    <b>固定资产Excel表：</b>
+                    <input type="file" name="fixed_asset_excel"/>
+                    <input type="submit" value="上传" class="scbtn"/>
+                </form>
+            </div>
+            <div id="office_supplies" class="upload" >
+                <form method="post" action="__CONTROLLER__/doUploadExcel" enctype="multipart/form-data">
+                    <b>办公用品Excel表：</b>
+                    <input type="file" name="office_supplies"/>
+                    <input type="submit" value="上传" class="scbtn"/>
+                </form>
+            </div>
+            <div id="asset_acceptance" class="upload" >
+                <form method="post" action="__CONTROLLER__/doUploadExcel" enctype="multipart/form-data">
+                    <b>资产验收Excel表：</b>
+                    <input type="file" name="asset_acceptance"/>
+                    <input type="submit" value="上传" class="scbtn"/>
+                </form>
+            </div>
+            <div id="contract" class="upload" >
+                <form method="post" action="__CONTROLLER__/doUploadExcel" enctype="multipart/form-data">
+                    <b>合同审批Excel表：</b>
+                    <input type="file" name="contract"/>
+                    <input type="submit" value="上传" class="scbtn"/>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

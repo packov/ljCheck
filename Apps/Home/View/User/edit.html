@@ -1,0 +1,19 @@
+<extend name="Public:from" />
+<block name="content">
+    <div class="formbody" id="addUser_div">
+        <div class="formtext">Hi，<b>{$username}</b>，欢迎使用修改用户功能！</div>
+        <form method="post" id="fromitem" onsubmit="ajaxSubmit('fromitem');return false;" action="{:U('User/doUpdateUser')}">
+        <ul class="forminfo">
+            <!--<li style="display: none" ><label>用户id</label><input name="id" type="text" class="dfinput" value="{$vo['id']}"/></li>-->
+            <input type="hidden" value="{$vo['id']}"  name="id" />
+            <li><label>用户名</label><input name="name" type="text" class="dfinput" value="{$vo['name']}" readonly="readonly"/></li>
+            <li><label>原密码<b>*</b></label><input name="oldPassword" type="text" class="dfinput"/></li>
+            <li><label>新密码<b>*</b></label><input name="new_password" type="text" class="dfinput"/></li>
+            <li><label>确认密码<b>*</b></label><input name="confirm_password" type="text" class="dfinput"/></li>
+            <li><input id="btn_updateUser" type="submit" class="btn" value="提交"/> <label>&nbsp;</label>
+                <input id="cancel_btn_addUser" onclick="closeParent();" type="button" class="btn" value="取消"/>
+            </li>
+        </ul>
+        </form>
+    </div>
+</block>
